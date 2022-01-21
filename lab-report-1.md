@@ -31,3 +31,7 @@ First call the ssh-keygen command on local client which creates public key and p
 ![Key_1](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Key_1.jpg)
 And then log into the remote server and call mkdir .ssh. After calling the mkdir command, log out and call scp to copy the public key file to the ssh directory.
 ![Key_2](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Key_2.jpg)
+
+## Optimizing Remote Running
+By calling two commands together such as adding a quote with desired command after the ssh log in command as in the screenshot, which accomplishes loging in and calling the ls in one line, the remote running can be made more efficiently. 
+![Optimizing](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Optimize.jpg)

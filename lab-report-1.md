@@ -25,3 +25,9 @@ Create a WhereAmI.java file at local device with the following content: ```class
 } ```
 Make sure you are at the directory of WhereAmI.java before running the scp command. Use the scp command to send WhereAmI.java to remote computer. After sending the file, log into the remote computer and should be able to compile and run WhereAmI.java successfully. 
 ![SCP](https://github.com/zhh02/Week-2-Lab-Report/blob/main/SCP.jpg)
+
+## Setting an SSH Key
+First call the ssh-keygen command on local client which creates public key and private key files.
+![Key_1](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Key_1.jpg)
+And then log into the remote server and call mkdir .ssh. After calling the mkdir command, log out and call scp to copy the public key file to the ssh directory.
+![Key_2](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Key_2.jpg)

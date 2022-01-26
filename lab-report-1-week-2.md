@@ -33,5 +33,7 @@ And then log into the remote server and call ```mkdir .ssh```. After calling the
 ![Key_2](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Key_2.jpg)
 
 ## Optimizing Remote Running
-By calling two commands together such as adding a quote with desired command after the ssh log in command as in the screenshot, which accomplishes loging in and calling the ls in one line, the remote running can be made more efficiently. 
-![Optimizing](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Optimize.jpg)
+In this section I want to demonstrate oprimizing remote running by copying a ```WhereamI1.java``` file from local server to remote server. A regular way of doing so is to call ```scp WhereamI1.java cs15lwi22aar@ieng6.ucsd.edu:~\``` command, which copies the file. And then I want to check if the file is moved to the correct directory, therefore I login to my remote account by calling ```ssh cs15lwi22aar@ieng6.ucsd.edu```. After loging in, I call the ```ls``` command and shows the list of files. In this case, I typed 89 keystrokes to finish the task as the following screenshot shows. 
+![Regular](https://github.com/zhh02/lab-report-1-week-2/blob/main/Regular.jpg)
+However, this task can be completed more easily by typing in the three commands together in one line: I call the command ```scp WhereamI2.java cs15lwi22aar@ieng6.ucsd.edu:~\; ssh cs15lwi22aar@ieng6.ucsd.edu "ls"``` to copy a file with same content and check by only running one time and typing 15 keystrokes using tab, up arrow and copy paste as the following screenshot shows. 
+![Optimized](https://github.com/zhh02/lab-report-1-week-2/blob/main/Optimized.jpg)

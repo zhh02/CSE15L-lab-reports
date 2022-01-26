@@ -15,8 +15,7 @@ After logging into the course account, I called ```ls -lat``` and ```cd``` comma
 ![Commands](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Commands.jpg)
 
 ## Moving Files with scp
-Create a WhereAmI.java file at local device with the following content:  
-  ```class WhereAmI {  
+Create a WhereAmI.java file at local device with the following content:  ```class WhereAmI {  
     public static void main(String[] args) {  
       System.out.println(System.getProperty("os.name"));  
       System.out.println(System.getProperty("user.name"));  

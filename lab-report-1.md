@@ -15,14 +15,14 @@ After logging into the course account, I called ```ls -lat``` and ```cd``` comma
 ![Commands](https://github.com/zhh02/Week-2-Lab-Report/blob/main/Commands.jpg)
 
 ## Moving Files with scp
-Create a WhereAmI.java file at local device with the following content:<br/>```class WhereAmI {<br/>
-    public static void main(String[] args) {<br/> 
-      System.out.println(System.getProperty("os.name"));<br/>
-      System.out.println(System.getProperty("user.name"));<br/>
-      System.out.println(System.getProperty("user.home"));<br/>
-      System.out.println(System.getProperty("user.dir"));<br/>
-    }<br/>
-  }```<br/>
+Create a WhereAmI.java file at local device with the following content:<br/>```class WhereAmI {<br/> ```
+    ```public static void main(String[] args) {<br/> ```
+      ```System.out.println(System.getProperty("os.name"));<br/>```
+      ```System.out.println(System.getProperty("user.name"));<br/>```
+      ```System.out.println(System.getProperty("user.home"));<br/>```
+      ```System.out.println(System.getProperty("user.dir"));<br/>```
+    ```}<br/>```
+  ```}<br/>```
 Make sure you are at the directory of WhereAmI.java before running the scp command. Use the scp command to send WhereAmI.java to remote computer. After sending the file, log into the remote computer and should be able to compile and run WhereAmI.java successfully. 
 ![SCP](https://github.com/zhh02/Week-2-Lab-Report/blob/main/SCP.jpg)
 

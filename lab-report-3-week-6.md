@@ -12,3 +12,12 @@ Remember to replace User with your username.<br/>
 ### Step 2: Try a faster and easier login command
 Open a terminal and use the command ```ssh ieng6``` to login. <br/>
 ![new-login](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/login.jpg)<br/>
+With the new command, we can login to the ieng6 account without typing or copying and pasting the full account name. <br/>
+### Step 3: Copy a file to ieng6 account with the configuration
+First create a new file on local device. I created a ```ImATestFile.java``` file with following content:<br/>
+```public class ImATestFile{```<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;```public static void main (String[] args){```<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```System.out.println(":)");```<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;```}```<br/>
+```}```
+![test-file](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/test_file.jpg)

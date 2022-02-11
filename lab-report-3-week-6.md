@@ -2,7 +2,7 @@
 ## Streamline ```ssh``` Configuration
 ### Step 1: Set up config file
 Find the config file under ```C:\Users\[Custom Username]\.ssh```. If there isn't one, create one. I don't have one so I create a new ```config``` file with no extension. 
-![create-config](config_file.jpg)<br/>
+![create-config](lab-report-3/config_file.jpg)<br/>
 Then open ```config``` file in VSCode, add following content to it: <br/>
 ```Host ieng6```<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;```HostName ieng6.ucsd.edu```<br/>

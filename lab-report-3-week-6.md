@@ -8,10 +8,10 @@ Then open ```config``` file in VSCode, add following content to it: <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;```HostName ieng6.ucsd.edu```<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;```User cs15lwi22zzz (use your username)```<br/>
 Remember to replace User with your username.<br/>
-![edit_config](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/config_edit.jpg)<br/>
+![edit_config](lab-report-3/config_edit.jpg)<br/>
 ### Step 2: Try a faster and easier login command
 Open a terminal and use the command ```ssh ieng6``` to login. <br/>
-![new-login](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/login.jpg)<br/>
+![new-login](lab-report-3/login.jpg)<br/>
 With the new command, we can login to the ieng6 account without typing or copying and pasting the full account name. <br/>
 ### Step 3: Copy a file to ieng6 account with the configuration
 First create a new file on local device. I created a ```ImATestFile.java``` file with following content:<br/>
@@ -20,7 +20,7 @@ First create a new file on local device. I created a ```ImATestFile.java``` file
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```System.out.println(":)");```<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;```}```<br/>
 ```}```
-![test-file](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/test_file.jpg)
+![test-file](lab-report-3/test_file.jpg)
 Then I copy it to the remote device and login to ieng6 account using command ```scp ImATestFile.java ieng6; ssh ieng6```.<br/>
-![scp](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/scp_config.jpg)<br/>
+![scp](lab-report-3/scp_config.jpg)<br/>
 ```ImATestFile.java``` has been successfully copied to remote account using scp and ssh configuration. 

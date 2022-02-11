@@ -22,5 +22,5 @@ First create a new file on local device. I created a ```ImATestFile.java``` file
 ```}```
 ![test-file](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/test_file.jpg)
 Then I copy it to the remote device and login to ieng6 account using command ```scp ImATestFile.java ieng6; ssh ieng6```.<br/>
-![scp](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/scp.jpg)<br/>
+![scp](https://github.com/zhh02/CSE15L-lab-reports/blob/main/lab-report-3/scp_config.jpg)<br/>
 ```ImATestFile.java``` has been successfully copied to remote account using scp and ssh configuration. 

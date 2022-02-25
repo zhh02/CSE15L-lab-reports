@@ -2,6 +2,4 @@
 [Lab Report 2](lab-report-2-week-4.html)<br/>
 [Lab Report 3](lab-report-3-week-6.html)<br/>
 [Lab Report 4](lab-report-4-week-8.html)<br/>
-<p align="center">
-  <img src="https://media.makeameme.org/created/when-you-realize-5a4f7e.jpg"/ width="100">
-</p>
+![random_meme](https://media.makeameme.org/created/when-you-realize-5a4f7e.jpg)

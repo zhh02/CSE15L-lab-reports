@@ -10,9 +10,11 @@ I used the diff command from Week 9 lab task to find the test cases with differe
 ### Test 1: [194.md](https://github.com/ucsd-cse15l-w22/markdown-parse/blob/main/test-files/194.md) <br/>
 ![194_result](lab-report-5/test194output.png)<br/>
 + According to the results, Joe's implementation of markdown-parse prints ```url``` while our groups' implementation prints ```[]```. Joe's implementation is correct for this test.<br/>
-+ Implementation of our group fails to recognize and return the link with nested square brackets since we are only checking the presence of the brackets at line 15 instead of the numbers or indexes of the brackets (or parentheses). To fix this, the code need to handle only the "outermost" brackets and parentheses.
++ Implementation of our group fails to recognize and return the link with nested square brackets since we are only checking the presence of the brackets at line 15 instead of the numbers or indexes of the brackets (or parentheses). To fix this, the code need to handle only the "outermost" brackets and parentheses. <br/>
+![Our_code](lab-report-5/Group_code.png)
 
 ### Test 2: [483.md](https://github.com/ucsd-cse15l-w22/markdown-parse/blob/main/test-files/483.md) <br/>
 ![483_result](lab-report-5/test483output.png)<br/>
 + According to the results, Joe's implemnetation of markdown-parse prints ```./target.md``` while our group's implementation prints ```[]```. Our group's implementation is correct for this test. <br/>
-+ Joe's implementation returns the link without checking the content enclosed by square brackets. The link is valid only when at least one non-space character is enclosed by the brackets. Joe's implementation might need to check not only the brackets and parentheses but also the content between them. 
++ Joe's implementation returns the link without checking the content enclosed by square brackets. The link is valid only when at least one non-space character is enclosed by the brackets. Joe's implementation might need to check not only the brackets and parentheses but also the content between them. <br/>
+![Joe_code](lab-report-5/Joe_code.png)

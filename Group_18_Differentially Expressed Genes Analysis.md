@@ -1,8 +1,8 @@
-#Detection of Differentially Expressed Genes#
-Jenelle Truong, Jiachen Xi, Zhuoling Huang
-1. Why are we interested in studying differentially expressed genes?
+# Detection of Differentially Expressed Genes #  
+#### Group 18 Jenelle Truong, Jiachen Xi, Zhuoling Huang  
+BENG183 2023FALL  
 
-
+## 1. Introduction to Differentially Expressed Genes
 While biological organisms of the same species may share a substantial portion of their genetic material, the manifestation of this shared genome can exhibit notable differences in terms of gene expression levels among individuals. For instance, one human being’s DNA blueprints can be 99.9% identical to another, but their expression of shared genes are not necessarily identical. 
 
 According to the central dogma of molecular biology, genes within DNA are transcribed into RNA, which can then form polypeptides or functional protein products through translation. 
@@ -10,62 +10,7 @@ Gene transcription and translation processes encompass intricate networks of mol
 
 Therefore, gene differential expression study is important to determine the underlying biological mechanisms that lead to certain phenotypes. 
 
-2. How are genes differentially expressed at the biological level?
 
-Transcription: regulatory elements interact with DNA and affect overall gene expression.  For instance, certain non-coding RNAs, such as large intergenic non-coding RNAs (lincRNAs), have been found to direct chromatin-modifying complexes to specific genomic loci, thus affecting epigenetic state. Incorporation of nucleotide sequences, like promoters and enhancers, works respectively to initiate transcription and increase transcription rate. 
-
-Translation:  alternative splicing transforms pre-mRNA into various isoforms of mRNA and protein products following translation.The figure below shows the coding exons as colored blocks and non-coding introns as black sections in the pre-mRNA. The different exon block combinations then highlights the results of alternative splicing through the skipping of certain exons and selection of different splice sites.  
-  
-Sample Collection and RNA Extraction:
-Biological samples, such as tissues or cells, are collected from different conditions.
-RNA is extracted from these samples, capturing the genetic information in the form of messenger RNA (mRNA).
-RNA Sequencing:
-The next-generation sequencing (NGS) technologies are often used to generate high-throughput RNA sequencing (RNA-seq) data.
-RNA-seq provides a comprehensive snapshot of the transcriptome by revealing the abundance of different RNA molecules.
-Data Preprocessing:
-Raw sequencing data undergoes preprocessing steps, including quality control, read alignment to a reference genome, and quantification of gene expression levels.
-Normalization:
-To account for variations in sequencing depth and other technical biases, the expression values are normalized. 
-The figure below shows what mapped gene reads may look like for a hypothetical example of two coconut trees, one low-yielding and the other high-yielding.
-
-At first glance, it appears that there is an increased count of gene A, roughly the same counts of gene B, and decreased counts of gene C when we compare the high-yielding to the low-yielding coconut tree. However, normalization of these counts is necessary, because metrics should positively correlate with number of reads and negatively correlate with library size and gene length. Thus, transcripts per million (TPM) is an ideal metric for normalization that also allows for comparison across samples.
-Statistical Analysis:
-Statistical methods, such as edgeR, DESeq2, or limma, are commonly used to identify genes that are differentially expressed between conditions. 
-These methods take into account the variability within samples and provide statistical measures.
-Different methods have different functions implemented as the table below shows. Selecting an appropriate methodology is crucial depending on the specific objectives of the study.
-
-Fold Change and p-value:
-Genes are often characterized by fold change, representing the magnitude of expression change, and p-value, indicating the statistical significance of the change.
-A threshold is set for both fold change and p-value to select genes that are significantly differentially expressed.
-Biological Interpretation:
-Once DEGs are identified, they can be further analyzed to understand their biological significance. We will discuss interpretation in more detail later in this paper. 
-
-
-
-4. How and why should the results from the workflows be interpreted?
-It is important to interpret the results from differential gene expression analysis, because the results may confer information about potential disease biomarkers. The discovery of new biomarkers then can be applied in the clinical setting for disease screening purposes and the measurement of disease progression.
-
-It does not indicate causation. 
-Although the workflow results may reveal which genes are differentially expressed, these identified genes don’t necessarily indicate causation between genotype and phenotype. While these genes can be disease-causing or disease-induced and thus affect gene expression, confounding factors, such as differences in age and environment between the samples, may also influence differential gene expression. 
-
-Further analysis can help understand how identified genes correlate with traits. 
-In addition to bidirectional analysis, gene ontology (GO) enrichment analysis and pathway analysis help identify the functional categories and pathways associated with the DEGs. 
-Enrichment Analysis: GO enrichment analysis involves assessing whether the identified DEGs are overrepresented in specific GO terms compared to what would be expected by chance.
-Annotation: By associating DEGs with specific biological processes, molecular functions, and cellular components, researchers can gain a deeper understanding of the functional roles these genes play.
-Identification of Key Pathways: By analyzing the pathways enriched with DEGs, researchers can identify key cellular processes and signaling cascades that are perturbed under the conditions being studied.
-
-
-
-5. DEG analysis application
-Biological and Medical Research:
-DEG analysis is crucial for understanding the molecular mechanisms underlying various biological processes, including development, differentiation, and response to stimuli.
-In medical research, DEG analysis is used to identify genes associated with diseases, discover potential drug targets, and characterize molecular signatures of different conditions.
-Precision Medicine:
-DEG analysis plays a vital role in the field of precision medicine by identifying gene expression profiles that can be used for patient stratification and personalized treatment strategies.
-Agricultural and Environmental Research:
-In agriculture, DEG analysis is used to study plant responses to environmental stress, identify genes associated with desirable traits, and improve crop yields.
-Environmental genomics utilizes DEG analysis to understand how organisms respond to changes in their environment.
-Pharmaceutical Development:
-DEG analysis is employed in drug discovery and development to identify potential biomarkers, evaluate drug efficacy, and understand the molecular mechanisms of drug action.
-Diagnostic and Prognostic Tools:
-DEG signatures are often used as diagnostic and prognostic markers for various diseases, helping clinicians make informed decisions about patient care.
+## 2. Differentially expressed genes at the biological level
+* __Transctiption:__  regulatory elements interact with DNA and affect overall gene expression.  For instance, certain non-coding RNAs, such as large intergenic non-coding RNAs (lincRNAs), have been found to direct chromatin-modifying complexes to specific genomic loci, thus affecting epigenetic state. Incorporation of nucleotide sequences, like promoters and enhancers, works respectively to initiate transcription and increase transcription rate. 
+![Commands](https://github.com/zhh02/transcription_model.png)

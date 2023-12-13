@@ -1,6 +1,16 @@
 # Detection of Differentially Expressed Genes #  
 #### Group 18 Jenelle Truong, Jiachen Xi, Zhuoling Huang  
-*BENG183 2023FALL* <br>
+*BENG183 2023FALL*   
+
+---
+### Contents  
+1. Introduction to Differentially Expressed Genes
+2. Differentially Expressed Genes at Biological Level
+3. DEG Analysis Workflow
+4. Result Interpretation
+5. DEG Analysis Application
+---
+<br>
 
 ## 1. Introduction to Differentially Expressed Genes
 While biological organisms of the same species may share a substantial portion of their genetic material, the manifestation of this shared genome can exhibit notable differences in terms of gene expression levels among individuals. For instance, one human being’s DNA blueprints can be 99.9% identical to another, but their expression of shared genes are not necessarily identical. 
@@ -8,9 +18,9 @@ While biological organisms of the same species may share a substantial portion o
 According to the central dogma of molecular biology, genes within DNA are transcribed into RNA, which can then form polypeptides or functional protein products through translation. Gene transcription and translation processes encompass intricate networks of molecular signals, transcription factors, and epigenetic modifications that collectively influence how genes are activated or suppressed [[1]](https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/translation/a/intro-to-gene-expression-central-dogma). 
 
 Therefore, gene differential expression study is important to determine the underlying biological mechanisms that lead to certain phenotypes. 
+<br>
 
-
-## 2. Differentially expressed genes at the biological level
+## 2. Differentially Expressed Genes at Biological Level
 * __Transctiption:__  regulatory elements interact with DNA and affect overall gene expression.  For instance, certain non-coding RNAs, such as large intergenic non-coding RNAs (lincRNAs), have been found to direct chromatin-modifying complexes to specific genomic loci, thus affecting epigenetic state. Incorporation of nucleotide sequences, like promoters and enhancers, works respectively to initiate transcription and increase transcription rate.
   
 ![alt](transcription_model.png)   <br>
@@ -18,6 +28,7 @@ Therefore, gene differential expression study is important to determine the unde
 * __Translation:__ alternative splicing transforms pre-mRNA into various isoforms of mRNA and protein products following translation.The figure below shows the coding exons as colored blocks and non-coding introns as black sections in the pre-mRNA. The different exon block combinations then highlights the results of alternative splicing through the skipping of certain exons and selection of different splice sites.  <br>
 ![alt](alt_splice.png) <br>
 > *[Figure 2](https://simple.wikipedia.org/wiki/Alternative_splicing#/media/File:Splicing_overview.jpg)* Hypothetical demonstration of alternative splicing produces two isoforms. Figure by Agathman [[2]](https://simple.wikipedia.org/wiki/Alternative_splicing).
+<br>
 
 ## 3. DEG Analysis Workflow  
 1. Sample Collection and RNA Extraction:
@@ -33,7 +44,7 @@ Therefore, gene differential expression study is important to determine the unde
    - By aligning the RNA-seq reads to the genomic coordinates, we're able to identify where the transcripts originate.
 5. Normalization:
    - To account for variations in sequencing depth and other technical biases, the expression values are normalized. 
-   - The figure below shows what mapped gene reads may look like for a hypothetical example of two coconut trees, one low-yielding and the other high-yielding.
+   - The figure below shows what mapped gene reads may look like for a hypothetical example of two coconut trees, one low-yielding and the other high-yielding [[3]](https://www.researchgate.net/figure/Basic-workflow-for-the-differential-gene-expression-analysis-for-nut-yield-The-figure_fig1_336363814).
    ![alt](norm_vis.png)
 > *Figure 3* Hypothetical demonstration of gene reads in need of normalization. Illustrated by Zhuoling Huang.  <br>
 
@@ -43,7 +54,7 @@ Therefore, gene differential expression study is important to determine the unde
    - These methods take into account the variability within samples and provide statistical measures.
    - Different methods have different functions implemented as the table below shows. Selecting an appropriate methodology is crucial depending on the specific objectives of the study.
    ![alt](methods_table.png)
-> *[Figure 4](https://academic.oup.com/view-large/191590960)* Nine functions for DGE results analysis and their implementation in existed tools. Figure A McDermaid, B Monier, J Zhao, B Liu and Q Ma, 2019, Briefings in Bioinformatics, Volume 20, Issue 6,p. 2044–2054.
+> *[Figure 4](https://academic.oup.com/view-large/191590960)* Nine functions for DGE results analysis and their implementation in existed tools. Figure by A McDermaid, B Monier, J Zhao, B Liu and Q Ma, 2019, Briefings in Bioinformatics, Volume 20, Issue 6,p. 2044–2054.
 
 7. Fold Change and p-value:    
    - Genes are often characterized by fold change, representing the magnitude of expression change, and p-value, indicating the statistical significance of the change.
@@ -52,16 +63,20 @@ Therefore, gene differential expression study is important to determine the unde
    - Once DEGs are identified, they can be further analyzed to understand their biological significance. We will discuss interpretation in more detail later.
 9. Post-Analysis Visualization (optional):  
    - Visualize results with tools like volcano plots, heatmaps, or MA plots to identify patterns and trends in gene expression changes.
+
+
+![alt](comprehensive_workflow.png)
+> *[Figure 5](https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/performing-a-rna-seq-experiment/data-analysis/differential-gene-expression-analysis/)* Comprehensive RNA-seq processing pipeline used to generate gene expression data in Expression Atlas with methods specified. Figure by EMBL-EBI, Functional Genomics II, Copyright © EMBL 2023.
 <br>
 
 ## 4. Result Interpretation  
 It is important to interpret the results from differential gene expression analysis, because the results may confer information about potential disease biomarkers. The discovery of new biomarkers then can be applied in the clinical setting for disease screening purposes and the measurement of disease progression.<br>
 > It does not indicate causation.
 
-Although the workflow results may reveal which genes are differentially expressed, these identified genes don’t necessarily indicate causation between genotype and phenotype. While these genes can be disease-causing or disease-induced and thus affect gene expression, confounding factors, such as differences in age and environment between the samples, may also influence differential gene expression.   
+Although the workflow results may reveal which genes are differentially expressed, these identified genes don’t necessarily indicate causation between genotype and phenotype. While these genes can be disease-causing or disease-induced and thus affect gene expression, confounding factors, such as differences in age and environment between the samples, may also influence differential gene expression [[4](https://www.nature.com/articles/s41467-021-25805-y#Sec11)].   
 > Further analysis can help understand how identified genes correlate with traits.
 
-In addition to bidirectional analysis, gene ontology (GO) enrichment analysis and pathway analysis help identify the functional categories and pathways associated with the DEGs:  
+In addition to bidirectional analysis, gene ontology (GO) enrichment analysis and pathway analysis help identify the functional categories and pathways associated with the DEGs [[5](https://geneontology.org/docs/go-enrichment-analysis/)]:  
 * __Enrichment Analysis:__ GO enrichment analysis involves assessing whether the identified DEGs are overrepresented in specific GO terms compared to what would be expected by chance.
 * __Annotation:__ We can gain a deeper understanding of the functional roles these genes play by associating DEGs with specific biological processes, molecular functions, and cellular components.
 * __Identification of Key Pathways__  By analyzing the pathways enriched with DEGs, we might be able to identify key cellular processes and signaling cascades that are perturbed under the conditions being studied.
